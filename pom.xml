@@ -1,0 +1,142 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<organization>
+		<name>abstra.cc factoría de software, s.a.</name>
+		<url>http://www.abstra.cc</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>GNU Lesser General Public License, Version 3.0</name>
+			<url>http://www.gnu.org/copyleft/lesser.html</url>
+		</license>
+	</licenses>
+	<groupId>cc.abstra.pasilla</groupId>
+	<artifactId>trantor-pdf-converter</artifactId>
+	<version>0.1.3</version>
+	<packaging>jar</packaging>
+	<name>trantor-pdf-converter</name>
+	<url>http://github.com/nandosola/trantor-pdf-converter</url>
+	<developers>
+		<developer>
+			<id>nandosola</id>
+			<name>Nando Sola</name>
+			<email>nando@robotchrist.com</email>
+		</developer>
+		<developer>
+			<id>frobs</id>
+			<name>Pedro Rivas</name>
+			<email>privasmontero87@gmail.com</email>
+		</developer>
+	</developers>
+	<properties>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<bavaria.file>2009-04-03-Bavaria-pdfa.zip</bavaria.file>
+		<isartor.file>isartor-pdfa-2008-08-13.zip</isartor.file>
+		<jai.binaries.amd64>jai-1_1_3-lib-linux-amd64.tar.gz</jai.binaries.amd64>
+		<imageio.binaries.amd64>jai_imageio-1_1-lib-linux-amd64.tar.gz</imageio.binaries.amd64>
+		<jai.binaries.i586>jai-1_1_3-lib-linux-amd64.tar.gz</jai.binaries.i586>
+		<imageio.binaries.i586>jai_imageio-1_1-lib-linux-amd64.tar.gz</imageio.binaries.i586>
+		<pdfbox.version>1.8.16</pdfbox.version>
+		<rubygem.dir>${project.build.directory}/ruby-gem</rubygem.dir>
+		<jodconverter.version>3.0-NX10</jodconverter.version>
+	</properties>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>itextpdf</artifactId>
+			<version>5.5.13.3</version>
+		</dependency>
+		<!-- Added new -->
+		<dependency>
+			<groupId>com.adobe.pdf</groupId>
+			<artifactId>pcfi</artifactId>
+			<version>2010.08.09</version>
+		</dependency>
+		<!-- ADded new -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>15.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!--<dependency>
+			<groupId>com.sun.media</groupId>
+			<artifactId>jai_imageio</artifactId>
+			<version>1.1</version>
+		</dependency>-->
+		<!--<dependency>
+			<groupId>com.sun.media</groupId>
+			<artifactId>jai_codec</artifactId>
+			<version>1.1.3</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.media</groupId>
+			<artifactId>jai_core</artifactId>
+			<version>1.1.3</version>
+		</dependency>-->
+		<dependency>
+			<groupId>org.apache.sanselan</groupId>
+			<artifactId>sanselan</artifactId>
+			<version>0.97-incubator</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mortennobel</groupId> <!-- LGPL v3 -->
+			<artifactId>java-image-scaling</artifactId>
+			<version>0.8.5</version>
+		</dependency>
+		<!--<dependency>
+			<groupId>com.jhlabs</groupId> 
+			<artifactId>image-filters</artifactId>
+			<version>1.0</version>
+		</dependency>-->
+		<!--<dependency>
+            <groupId>org.icepdf</groupId>
+            <artifactId>icepdf-core</artifactId>
+            <version>4.3.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.drewnoakes</groupId>
+            <artifactId>metadata-extractor</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+        -->
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId> <!-- APL v2.0 -->
+			<artifactId>pdfbox</artifactId>
+			<version>${pdfbox.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId> <!-- APL v2.0 -->
+			<artifactId>preflight</artifactId>
+			<version>${pdfbox.version}</version>
+		</dependency>
+		<!--<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-jdk15</artifactId>
+			<version>1.60</version>
+			<scope>runtime</scope>
+		</dependency>-->
+		<!--
+		<dependency>
+			<groupId>org.artofsolving.jodconverter</groupId> 
+			<artifactId>jodconverter-core</artifactId>
+			<version>${jodconverter.version}</version>
+		</dependency>-->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<version>1.3</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
